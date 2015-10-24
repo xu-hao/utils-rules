@@ -1,4 +1,6 @@
-# example rule for calling msiExecCmd
+# example rule for calling 
+# msiExecCmd
+# and msiFree
 
 execCmd(*cmd, *args) {
 	*argStr = "";
