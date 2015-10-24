@@ -1,6 +1,6 @@
 # example rule for calling 
 # msiExecCmd
-# msiFreeExecCmd
+# msiFreeExecCmdOut
 
 execCmd(*cmd, *args) {
 	*argStr = "";
@@ -13,7 +13,7 @@ execCmd(*cmd, *args) {
 	msiGetStdoutInExecCmdOut(*status, *out);
 	msiGetStderrInExecCmdOut(*status, *err);
 
-	msiFreeExecCmd(*status);
+	msiFreeExecCmdOut(*status);
 
 	(*e, *out, *err);
 }
