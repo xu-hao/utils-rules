@@ -9,7 +9,7 @@ execCmd(*cmd, *args) {
 	msiGetStdoutInExecCmdOut(*status, *out);
 	msiGetStderrInExecCmdOut(*status, *err);
 
-	(*status);
+	msiFreeExecCmdOut(*status);
 
 	(*e, *out, *err);
 }
