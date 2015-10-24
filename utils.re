@@ -1,4 +1,4 @@
-execCmd(*cmd, *args, *status) {
+execCmd(*cmd, *args) {
 	*argStr = "";
 	foreach(*arg in *args) {
 		*argStr = *argStr++execCmdArg(*arg)++" ";
@@ -8,5 +8,6 @@ execCmd(*cmd, *args, *status) {
 	*e = errorcode(msiExecCmd(*cmd, *argStr, "null", "null", "null", *status));
 	msiGetStderrInExecCmdOut(*status, *err);
 	msiGetStdoutInExecCmdOut(*status, *out);
+	msiFree(*status);
 	(*e, *out, *err);
 }
