@@ -1,7 +1,3 @@
-# example rule for calling 
-# msiExecCmd
-# msiFreeExecCmdOut
-
 execCmd(*cmd, *args) {
 	*argStr = "";
 	foreach(*arg in *args) {
@@ -13,7 +9,7 @@ execCmd(*cmd, *args) {
 	msiGetStdoutInExecCmdOut(*status, *out);
 	msiGetStderrInExecCmdOut(*status, *err);
 
-	msiFreeExecCmdOut(*status);
+	(*status);
 
 	(*e, *out, *err);
 }
