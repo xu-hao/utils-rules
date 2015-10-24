@@ -1,3 +1,4 @@
+# example rule for calling msiExecCmd
 execCmd(*cmd, *args) {
 
 	*argStr = "";
